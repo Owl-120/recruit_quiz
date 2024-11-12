@@ -309,7 +309,6 @@ QuestionList CreateSynonymExam()
 	{
 		int count;            // —v‘f”
 		const char* kanji[4]; // —Ş‹`Œê‚Ì”z—ñ
-
 	}
 	data[] =
 	{
