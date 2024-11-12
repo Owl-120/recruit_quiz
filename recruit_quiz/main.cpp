@@ -117,7 +117,10 @@ int main()
 	else if (subject == 3)
 	{
 		questions = CreateEnglishWordExam();
+		QuestionList phraseExam = CreateEnglishPhraseExam();
+		questions.insert(questions.end(), phraseExam.begin(), phraseExam.end());
 	}
+	
 
 	for (const auto& e : questions)
 	{
