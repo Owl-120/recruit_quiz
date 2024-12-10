@@ -124,25 +124,14 @@
 		 const char* translation; // 例文の日本語訳
 		 int blankCount;          // 穴の候補の数
 		 int blankOptions[3];     // 穴の候補になる単語の位置
-
 	 }
 	 data[] =
 	 {
-{ "too [A] to [B]", "とても[A]なので[B]できない",
-"The tea was too hot to drink.", "お茶が熱すぎて飲めなかった。",
-2, { 3, 5 }},
-{ "be looking forward to [A]", "[A]を楽しみにする",
-"I'm looking forward to seening you", "あなたに会うのを楽しみにしています。",
-3, { 1, 2, 3 }},
-{ "according to [A]", "[A]によると",
-"Acoording to the weather forcast, today is rain.", "天気予報によると、今日は雨だ。",
-2, { 0, 1 }},
-{ "as soon as [A]", "[A]するとすぐに",
-"As soon as I arrive, I will call you.", "到着したらすぐに電話します。",
-3, { 0, 1, 2 }},
-{ "be not supposed to [A]", "[A]してはいけないことになっている",
-"You are not supposed to enter this room.", "この部屋に入ってはいけません。",
-3, { 2, 3, 4 }},
+{ "too [A] to [B]", "とても[A]なので[B]できない","The tea was too hot to drink.", "お茶が熱すぎて飲めなかった。",2, { 3, 5 }},
+{ "be looking forward to [A]", "[A]を楽しみにする","I'm looking forward to seening you", "あなたに会うのを楽しみにしています。",3, { 1, 2, 3 }},
+{ "according to [A]", "[A]によると","Acoording to the weather forcast, today is rain.", "天気予報によると、今日は雨だ。",2, { 0, 1 }},
+{ "as soon as [A]", "[A]するとすぐに","As soon as I arrive, I will call you.", "到着したらすぐに電話します。",3, { 0, 1, 2 }},
+{ "be not supposed to [A]", "[A]してはいけないことになっている","You are not supposed to enter this room.", "この部屋に入ってはいけません。",3, { 2, 3, 4 }},
 	 };
 
 	 constexpr int quizCount = 5;
