@@ -123,7 +123,7 @@ int main()
 	}
 	else if (subject == 5)
 	{
-		questions = CreateGeographyExam();
+		questions = CreatePrefecturesExam();
 	}
 	
 
