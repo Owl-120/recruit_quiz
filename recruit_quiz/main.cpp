@@ -24,16 +24,9 @@ int main()
 	{
 		questions = CreateMathematicsExam();
 	}
-	else if (subject == 2) {
-		questions = CreateKanjiExam();
-		const QuestionList idiomExam = CreateIdiomExam();
-		questions.insert(questions.end(), idiomExam.begin(), idiomExam.end());
-		QuestionList homophoneExam = CreateHomophoneExam();
-		questions.insert(questions.end(), homophoneExam.begin(), homophoneExam.end());
-		QuestionList antonymExam = CreateAntonymExam();
-		questions.insert(questions.end(), antonymExam.begin(), antonymExam.end());
-		QuestionList synonymExam = CreateSynonymExam();
-		questions.insert(questions.end(), synonymExam.begin(), synonymExam.end());
+	else if (subject == 2) 
+	{
+		questions = CreateMathematicsExam();
 	}
 	else if (subject == 3)
 	{
