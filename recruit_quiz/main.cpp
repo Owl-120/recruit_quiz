@@ -5,6 +5,7 @@
 #include "exam_science.h"
 #include "exam_geography.h"
 #include "exam_politics.h"
+#include "exam_economics.h"
 #include "utility.h"
 #include <iostream>
 #include <string>
@@ -33,7 +34,7 @@ int main()
 { "物理", CreatePhysicsExam },
 { "地理", CreatePrefecturesExam },
 { "政治", CreatePoliticsExam },
-//{ "経済", CreateEconomicsExam },
+{ "経済", CreateEconomicsExam },
 	};
 
 
@@ -91,10 +92,39 @@ int main()
 			cout << "正解!\n";
 			correctCounts[currentSubjectNo]++; // 正答数を増やす
 		}
-		else
+		else if (e.b.empty())
 		{
+			// 答えがひとつだけの場合
 			cout << "間違い!正解は" << e.a << "\n";
 		}
+		else
+		{
+			// 答えが複数ある場合、いずれかと一致すれば正解とする
+			bool isMatch = false;
+			for (const auto& b : e.b)
+			{
+				if (answer == b)
+				{
+					isMatch = true; // 一致する答えが見つかった
+					break;
+				}
+			}
+
+			// 比較結果を出力
+			if (isMatch)
+			{
+				cout << "正解！\n";
+			}
+			else
+			{
+				cout << "間違い！　正解は" << e.a << "(または";
+				for (auto& b : e.b)
+				{
+					cout << "、" << b;
+				}
+				cout << ")\n";
+			}
+		} // if answer == e.a
 		// 「回答済み問題数」が「教科の問題数」以上になったら、次の教科に進む
 		if (subject == 0)
 		{
