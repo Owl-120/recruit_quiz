@@ -4,6 +4,8 @@
 #include "exam_english.h"
 #include "exam_science.h"
 #include "exam_geography.h"
+#include "exam_politics.h"
+#include "utility.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -30,7 +32,7 @@ int main()
 { "‰pŒê", CreateEnglishExam },
 { "•¨—", CreatePhysicsExam },
 { "’n—", CreatePrefecturesExam },
-//{ "­¡", CreatePoliticsExam },
+{ "­¡", CreatePoliticsExam },
 //{ "ŒoÏ", CreateEconomicsExam },
 	};
 
@@ -75,6 +77,14 @@ int main()
 
 		string answer;
 		cin >> answer;
+
+		// “ü—Í‚³‚ê‚½“š‚¦‚ğSJIS‚©‚çASCII‚É•ÏŠ·‚·‚é
+		const string ascii = ConvertSjisNumberToAscii(answer);
+		// •ÏŠ·‚ª¬Œ÷‚µ‚½ê‡‚ÍASCII•¶š—ñ‚É’u‚«Š·‚¦‚é
+		if (!ascii.empty())
+		{
+			answer = ascii;
+		}
 
 		if (answer == e.a)
 		{
