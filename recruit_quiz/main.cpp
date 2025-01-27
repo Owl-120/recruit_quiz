@@ -2,6 +2,7 @@
 #include "exam_mathematics.h"
 #include "exam_japanese.h"
 #include "exam_english.h"
+#include "exam_science.h"
 #include "exam_geography.h"
 #include <iostream>
 #include <string>
@@ -27,7 +28,7 @@ int main()
 { "”Šw", CreateMathematicsExam },
 { "‘Œê", CreateJapaneseExam },
 { "‰pŒê", CreateEnglishExam },
-//{ "•¨—", CreatePhysicsExam },
+{ "•¨—", CreatePhysicsExam },
 //{ "’n—", CreateGeographyExam },
 //{ "­¡", CreatePoliticsExam },
 //{ "ŒoÏ", CreateEconomicsExam },
