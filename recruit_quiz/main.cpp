@@ -29,7 +29,7 @@ int main()
 { "‘Œê", CreateJapaneseExam },
 { "‰pŒê", CreateEnglishExam },
 { "•¨—", CreatePhysicsExam },
-//{ "’n—", CreateGeographyExam },
+{ "’n—", CreatePrefecturesExam },
 //{ "­¡", CreatePoliticsExam },
 //{ "ŒoÏ", CreateEconomicsExam },
 	};
